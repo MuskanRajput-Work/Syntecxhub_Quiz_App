@@ -67,8 +67,8 @@ const questions = [
         answers: [
             { text: ".class", correct: false },
             { text: "#id", correct: false },
-            { text: "element", correct: false },
-            { text: "*", correct: true }
+            { text: "*", correct: false },
+            { text: "!element", correct: true }
         ]
     },
     {
@@ -135,22 +135,26 @@ function resetState() {
 function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
+    
     if (isCorrect) {
-        selectedBtn.classList.add('correct');
+        selectedBtn.classList.add('correct'); 
         score++;
     } else {
-        selectedBtn.classList.add('wrong');
+        selectedBtn.classList.add('wrong'); 
     }
-    
+
     Array.from(answerButtonsElement.children).forEach(button => {
-        if(button.dataset.correct === "true") button.classList.add('correct');
+        if(button.dataset.correct === "true") {
+            button.classList.add('correct');
+        }
         button.disabled = true;
     });
 
     if (questions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
-        showScore();
+        
+        setTimeout(showScore, 1000); 
     }
 }
 
