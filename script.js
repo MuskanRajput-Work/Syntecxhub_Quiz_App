@@ -10,9 +10,9 @@ const questions = [
     },
     {
         question: "Which property is used to change background color in CSS?",
-        answers: [
-            { text: "background-color", correct: true },
+        answers: [            
             { text: "color", correct: false },
+            { text: "background-color", correct: true },
             { text: "bgcolor", correct: false },
             { text: "text-color", correct: false }
         ]
@@ -20,19 +20,19 @@ const questions = [
     {
         question: "Which of the following is a javascript framework?",
         answers: [
-            { text: "React", correct: true },
             { text: "Django", correct: false },
             { text: "Laravel", correct: false },
+            { text: "React", correct: true },
             { text: "Flask", correct: false }
         ]
     },
     {
         question: "What does CSS stand for?",
         answers: [
-            { text: "Cascading Style Sheets", correct: true },
             { text: "Creative Style System", correct: false },
             { text: "Computer Style Sheets", correct: false },
-            { text: "Colorful Style Sheets", correct: false }
+            { text: "Colorful Style Sheets", correct: false },
+            { text: "Cascading Style Sheets", correct: true }
         ]
     },
     {
@@ -72,12 +72,12 @@ const questions = [
         ]
     },
     {
-        question: "Which of the following is used to declare a variable in JavaScript?",
+        question: "Which of the following is used to define a function in JavaScript?",
         answers: [
-            { text: "var", correct: true },
-            { text: "let", correct: true },
-            { text: "const", correct: true },
-            { text: "variable", correct: false }
+            { text: "function", correct: true },
+            { text: "def", correct: false },
+            { text: "func", correct: false },
+            { text: "define", correct: false }
         ]
     },
     {
